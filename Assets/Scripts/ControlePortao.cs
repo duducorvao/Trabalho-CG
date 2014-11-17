@@ -2,22 +2,15 @@
 using System.Collections;
 
 public class ControlePortao : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
+	IEnumerator LevantarPortao() {
+		Vector3 novaPosicao = transform.position;
+		for (float f = transform.position.y; f < 6; f += 0.5f) {
+			transform.position = new Vector3(transform.position.x, f, transform.position.z);
+			yield return new WaitForSeconds(0.2f);
+		}
 	}
 
 	void OnTriggerEnter(Collider other) {
-		Debug.Log ("iei");
-		Debug.Log (other.tag);
-		if (other.tag == "Jogador") {
-			gameObject.SetActive(false);
-				}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		StartCoroutine (LevantarPortao());
 	}
 }
