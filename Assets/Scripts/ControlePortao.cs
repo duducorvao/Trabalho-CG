@@ -2,10 +2,11 @@
 using System.Collections;
 
 public class ControlePortao : MonoBehaviour {
+	public GameObject portao;
+
 	IEnumerator LevantarPortao() {
-		Vector3 novaPosicao = transform.position;
 		for (float f = transform.position.y; f < 6; f += 0.5f) {
-			transform.position = new Vector3(transform.position.x, f, transform.position.z);
+			portao.transform.position = new Vector3(portao.transform.position.x, f, portao.transform.position.z);
 			yield return new WaitForSeconds(0.2f);
 		}
 	}
