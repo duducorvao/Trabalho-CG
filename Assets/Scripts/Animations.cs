@@ -16,7 +16,7 @@ public class Animations : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		v = Input.GetAxis ("Vertical");
+		v = Input.GetAxis ("JogadorVertical");
 		h = Input.GetAxis ("Horizontal");
 
 		Walking();
