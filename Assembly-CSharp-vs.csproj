@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{BA891A22-5036-3C97-75E0-0B74AC9BDA5E}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_5;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Scripts\Animations.cs" />
+     <Compile Include="Assets\Scripts\ControleCamera.cs" />
+     <Compile Include="Assets\Scripts\ControleDragao.cs" />
+     <Compile Include="Assets\Scripts\ControleJogador.cs" />
+     <Compile Include="Assets\Scripts\ControlePortao.cs" />
+     <Compile Include="Assets\WellFired\Shared\Uncompiled\Runtime\Platform Specific\IO\OtherIOHelper.cs" />
+     <Compile Include="Assets\WellFired\Shared\Uncompiled\Runtime\Platform Specific\IO\WindowsAppStoreIOHelper.cs" />
+     <Compile Include="Assets\WellFired\Shared\Uncompiled\Runtime\Platform Specific\Reflection\OtherReflectionHelper.cs" />
+     <Compile Include="Assets\WellFired\Shared\Uncompiled\Runtime\Platform Specific\Reflection\WindowsAppStoreReflectionHelper.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Example Scenes\04 Intermediate Examples\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Example Scenes\ExampleSceneScripts\AlterPlaybackForASequence.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Example Scenes\ExampleSceneScripts\BasicCharacterControllerGUI.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Example Scenes\ExampleSceneScripts\BasicCharacterControls.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Platform Specific\Reflection\OtherReflectionHelper.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Platform Specific\Reflection\WindowsAppStoreReflectionHelper.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Quick Start Prefabs\Scripts\AmbientLightAdjuster.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Quick Start Prefabs\Scripts\AutoPlaySequence.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Quick Start Prefabs\Scripts\SequenceTrigger.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Animation Mecanim\Animator\USSetAnimatorBool.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Animation Mecanim\Animator\USSetAnimatorFloat.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Animation Mecanim\Animator\USSetAnimatorInteger.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Animation Mecanim\Animator\USSetAnimatorLayerWeight.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Animation Mecanim\Animator\USSetAnimatorPlaybackSpeed.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Animation Mecanim\Animator\USToggleAnimatorApplyRootMotion.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Animation Mecanim\Animator\USToggleAnimatorStabalizeFeet.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Animation\USBlendAnimEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Animation\USBlendAnimNoScrub.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Animation\USPlayAdvancedAnimEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Animation\USPlayAnimEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Application\USLoadLevelAdditiveEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Application\USLoadLevelEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Attachment\USAttachToParentEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Audio\USFadeAudioEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Audio\USPauseResumeAudioEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Audio\USPlayAudioEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Audio\USStopAudioEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Debug\USMessageEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Fullscreen\USDisplayImageEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Fullscreen\USFadeScreenEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Fullscreen\USPrintTextEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Light\USSetAmbientLightEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Object\USEnableComponentEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Object\USEnableObjectEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Particle System\USParticleEmitterStartEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Particle System\USParticleEmitterStopEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Physics\USApplyForceEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Physics\USSleepRigidBody.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Render\USChangeColor.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Render\USChangeTexture.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Render\USMeshRenderDisable.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Sequence\USPauseSequenceEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Sequence\USPlaySequenceEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Sequence\USSetPlaybackRateEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Sequence\USSkipSequenceEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Sequence\USStopSequenceEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Signal\USSendMessageEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Spawn\USSpawnPrefabEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Time\USTimeScaleEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Transform\USLookAtObjectEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Transform\USMatchObjectEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Transform\USParentAndResetObjectEvent.cs" />
+     <Compile Include="Assets\WellFired\uSequencer\Sequencer Events\Transform\USWarpToObject.cs" />
+ <Reference Include="SharedRuntime">
+ <HintPath>/Users/lpires/Desktop/CG/trabalho2/Trabalho-CG/Assets/WellFired/Shared/Compiled/Runtime/SharedRuntime.dll</HintPath>
+ </Reference>
+ <Reference Include="uSequencerRuntime">
+ <HintPath>/Users/lpires/Desktop/CG/trabalho2/Trabalho-CG/Assets/WellFired/uSequencer/Sequencer/uSequencerRuntime.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
