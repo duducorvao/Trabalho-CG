@@ -2,15 +2,53 @@
 using System.Collections;
 
 public class ControleJogador : MonoBehaviour {
+	public Animator animator;
 	public float velocidadeTranslacao;
 	public float velocidadeRotacao;
+	private bool walk;
+	private bool attack;
+	private bool defend;
 
-	void FixedUpdate () {
+	void Init() {
+		AlterarEstados(0.0f, 0.0f);
+	}
+
+	void FixedUpdate(){
 		float translacao = Input.GetAxis ("JogadorVertical") * velocidadeTranslacao;
 		float rotacao    = Input.GetAxis ("JogadorHorizontal") * velocidadeRotacao;
-		translacao *= Time.deltaTime;
-		rotacao    *= Time.deltaTime;
-		transform.Translate (translacao, 0, 0);
-		transform.Rotate (0, rotacao, 0);
-	} 
+		if (translacao < 0)
+			translacao = 0;
+		AlterarEstados (translacao, rotacao);
+		if (walk)
+			translacao /= 3.0f;
+
+		animator.SetFloat ("Sprint", translacao);
+		animator.SetBool ("Walk", walk);
+		animator.SetBool ("Attack", attack);
+		animator.SetBool ("Defend", defend);
+		
+		transform.Translate(0, 0, -translacao * Time.deltaTime);
+		transform.Rotate(0, rotacao * Time.deltaTime, 0);
+	}
+
+	void AlterarEstados(float translacao, float rotacao) {
+		// inicialmente, sem nenhum estado
+		walk = false;
+		attack = false;
+		defend = false;
+
+		// verifica se está andando
+		if (translacao > 0) {
+			// se andando, verifica se está com o modificador para andar/correr
+			if (Input.GetButton("BotaoAndar"))
+				walk = true;
+		} else {
+			// verifica se está atacando ou defendendo
+			if (Input.GetButton("BotaoAtacar"))
+				attack = true;
+			else if (Input.GetButton("BotaoDefender"))
+				defend = true;
+		}
+	}
+
 }

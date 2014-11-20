@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ControlePortao : MonoBehaviour {
+public class DetectorPortao : MonoBehaviour {
 	public GameObject portao;
 
 	IEnumerator LevantarPortao(Vector3 incrementoPosicao, float duracao) {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ControleLuz : MonoBehaviour {
+public class DetectorIluminacao : MonoBehaviour {
 	public GameObject iluminacao;
 	bool jaPassou;
 
