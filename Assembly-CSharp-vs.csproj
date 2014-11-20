@@ -49,7 +49,9 @@
      <Compile Include="Assets\Scripts\Animations.cs" />
      <Compile Include="Assets\Scripts\ControleCamera.cs" />
      <Compile Include="Assets\Scripts\ControleDragao.cs" />
+     <Compile Include="Assets\Scripts\ControleIluminacao.cs" />
      <Compile Include="Assets\Scripts\ControleJogador.cs" />
+     <Compile Include="Assets\Scripts\ControleLuz.cs" />
      <Compile Include="Assets\Scripts\ControlePortao.cs" />
      <Compile Include="Assets\WellFired\Shared\Uncompiled\Runtime\Platform Specific\IO\OtherIOHelper.cs" />
      <Compile Include="Assets\WellFired\Shared\Uncompiled\Runtime\Platform Specific\IO\WindowsAppStoreIOHelper.cs" />

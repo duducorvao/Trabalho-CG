@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ControleDragao.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ControleLuz.cs">
     <Files>
-      <File FileName="Assets/Scripts/ControlePortao.cs" Line="17" Column="1" />
-      <File FileName="Assets/Scripts/ControleDragao.cs" Line="20" Column="48" />
+      <File FileName="Assets/Scripts/ControleDragao.cs" Line="19" Column="80" />
+      <File FileName="Assets/Scripts/ControleIluminacao.cs" Line="16" Column="32" />
+      <File FileName="Assets/Scripts/ControleLuz.cs" Line="14" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
