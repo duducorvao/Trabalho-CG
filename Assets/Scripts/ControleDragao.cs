@@ -15,7 +15,7 @@ public class ControleDragao : MonoBehaviour {
 		}
 
 		// todo: colocar no lugar certo
-		if (Input.GetKey(KeyCode.M)) {
+		if (Input.GetKeyUp(KeyCode.M)) {
 			StartCoroutine(AnimacaoMorte(Vector3.up * 720.0f, Vector3.one * 0.1f, 3.0f));
 		}
 	}
@@ -31,10 +31,11 @@ public class ControleDragao : MonoBehaviour {
 
 
 	IEnumerator AnimacaoMorte(Vector3 anguloGiro, Vector3 tamanhoFinal, float duracao) {
-		Debug.Log (tamanhoFinal);
 		Vector3 grausPorSegundo = anguloGiro / duracao;
 		Vector3 scalePorSegundo = (tamanhoFinal - transform.localScale) / duracao;
-		for(float t = 0f ; t < duracao ; t += Time.deltaTime) {
+		Debug.Log (grausPorSegundo);
+		Debug.Log (scalePorSegundo);
+		for(float t = 0f ; t < duracao; t += Time.deltaTime) {
 			transform.Rotate(grausPorSegundo * Time.deltaTime);
 			transform.localScale += scalePorSegundo * Time.deltaTime;
 			yield return null ;
