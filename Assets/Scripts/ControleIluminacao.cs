@@ -12,10 +12,7 @@ public class ControleIluminacao : MonoBehaviour {
 		fill.light.intensity = 0;
 	}
 
-	public void CriarFade(bool fadeIn) {
-		StartCoroutine(Fade(fadeIn, 2.0f));
-	}
-	IEnumerator Fade(bool fadeIn, float duracao) {
+	public IEnumerator Fade(bool fadeIn, float duracao) {
 		float intensidadePorSegundoDirectional = intensidadeDirectional / duracao;
 		float intensidadePorSegundoFill = intensidadeFill / duracao;
 		if (!fadeIn) {

@@ -2,7 +2,10 @@
 using System.Collections;
 
 public class DetectorIluminacao : MonoBehaviour {
-	public GameObject iluminacao;
+	public ControleIluminacao iluminacao;
+	public ControleDragao dragao;
+	public GameObject cameraJogador;
+	public GameObject cameraDragao;
 	bool jaPassou;
 
 	void Start() {
@@ -11,9 +14,14 @@ public class DetectorIluminacao : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) {
 		if (!jaPassou) {
-			ControleIluminacao controleIluminacao = (ControleIluminacao)iluminacao.GetComponent (typeof(ControleIluminacao));
-			controleIluminacao.CriarFade (true);
+			StartCoroutine(iluminacao.Fade(true, 2.0f));
+			cameraDragao.SetActive(true);
+			cameraJogador.SetActive(false);
+			StartCoroutine(dragao.IrParaArena(5.0f));
+			cameraDragao.SetActive(false);
+			cameraJogador.SetActive(true);
 			jaPassou = true;
+
 		}
 	}
 }

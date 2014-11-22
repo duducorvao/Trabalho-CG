@@ -6,7 +6,7 @@ public class DetectorPortao : MonoBehaviour {
 
 	IEnumerator LevantarPortao(Vector3 incrementoPosicao, float duracao) {
 		Vector3 deslocamentoPorSegundo = incrementoPosicao / duracao;
-		for(float t = 0f ; t < duracao ; t += Time.deltaTime) {
+		for(float t = 0.0f; t < duracao ; t += Time.deltaTime) {
 			portao.transform.Translate(deslocamentoPorSegundo * Time.deltaTime);
 			yield return null;
 		}
