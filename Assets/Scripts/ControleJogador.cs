@@ -9,7 +9,7 @@ public class ControleJogador : MonoBehaviour {
 	private bool attack;
 	private bool defend;
 
-	void Init() {
+	void Start() {
 		AlterarEstados(0.0f, 0.0f);
 	}
 
