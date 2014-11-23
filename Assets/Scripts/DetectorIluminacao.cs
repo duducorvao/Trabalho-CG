@@ -18,7 +18,7 @@ public class DetectorIluminacao : MonoBehaviour {
 		}
 	}
 	IEnumerator animar() {
-		StartCoroutine(iluminacao.Fade(true, 2.0f));
+		StartCoroutine(iluminacao.Fade(true, 3.0f));
 		yield return new WaitForSeconds(1.0f);
 		dragao.gameObject.SetActive(true);
 		StartCoroutine(dragao.IrParaArena(5.0f));

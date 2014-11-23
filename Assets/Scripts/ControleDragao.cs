@@ -8,6 +8,8 @@ public class ControleDragao : MonoBehaviour {
  	public GameObject[] caminho;
 	public GameObject cameraJogador;
 	public GameObject cameraDragao;
+	public GameObject cameraBau;
+	public ControleIluminacao iluminacao;
 	public float velocidadeTranslacao;
 	public float velocidadeRotacao;
 
@@ -39,8 +41,15 @@ public class ControleDragao : MonoBehaviour {
 			transform.localScale += scalePorSegundo * Time.deltaTime;
 			yield return null ;
 		}
+
 		fumaca.transform.position = transform.position;
 		fumaca.SetActive (true);
+
+		yield return new WaitForSeconds(5.0f);
+
+		StartCoroutine (iluminacao.Fade (false, 3.0f));
+
+		alterarCamerasBau();
 	}
 
 	public IEnumerator IrParaArena(float duracaoTotal) {
@@ -60,7 +69,7 @@ public class ControleDragao : MonoBehaviour {
 		for (int i = 0; i < caminho.Length; i++)
 		tempos[i] = tempos[i] / distanciaTotal;
 		// 
-		alterarCameras();
+		alterarCamerasJogadorDragao();
 		// faz o movimento
 		float velocidade = distanciaTotal / duracaoTotal;
 		float duracaoAtual;
@@ -76,12 +85,17 @@ public class ControleDragao : MonoBehaviour {
 		}
 
 		rigidbody.useGravity = true;
-		alterarCameras ();
+		alterarCamerasJogadorDragao ();
 	}
 
-	void alterarCameras() {
+	void alterarCamerasJogadorDragao() {
 		bool jogador = cameraJogador.camera.enabled;
 		cameraJogador.camera.enabled = !jogador;
 		cameraDragao.camera.enabled = jogador;
+	}
+	void alterarCamerasBau() {
+		cameraJogador.camera.enabled = false;
+		cameraDragao.camera.enabled = false;
+		cameraBau.camera.enabled = true;
 	}
 }
