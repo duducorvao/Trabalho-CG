@@ -4,8 +4,6 @@ using System.Collections;
 public class DetectorIluminacao : MonoBehaviour {
 	public ControleIluminacao iluminacao;
 	public ControleDragao dragao;
-	public GameObject cameraJogador;
-	public GameObject cameraDragao;
 	bool jaPassou;
 
 	void Start() {
@@ -14,14 +12,16 @@ public class DetectorIluminacao : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) {
 		if (!jaPassou) {
-			StartCoroutine(iluminacao.Fade(true, 2.0f));
-			cameraDragao.SetActive(true);
-			cameraJogador.SetActive(false);
-			StartCoroutine(dragao.IrParaArena(5.0f));
-			cameraDragao.SetActive(false);
-			cameraJogador.SetActive(true);
+			StartCoroutine(animar());
 			jaPassou = true;
 
 		}
 	}
+	IEnumerator animar() {
+		StartCoroutine(iluminacao.Fade(true, 2.0f));
+		yield return new WaitForSeconds(1.0f);
+		dragao.gameObject.SetActive(true);
+		StartCoroutine(dragao.IrParaArena(5.0f));
+	}
 }
+

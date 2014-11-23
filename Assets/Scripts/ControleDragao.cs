@@ -6,6 +6,8 @@ public class ControleDragao : MonoBehaviour {
 	public GameObject bolaOriginal;
 	public GameObject fumaca;
  	public GameObject[] caminho;
+	public GameObject cameraJogador;
+	public GameObject cameraDragao;
 	public float velocidadeTranslacao;
 	public float velocidadeRotacao;
 
@@ -25,8 +27,8 @@ public class ControleDragao : MonoBehaviour {
 	void FixedUpdate () {
 		float translacao = Input.GetAxis ("DragaoVertical") * velocidadeTranslacao;
 		float rotacao    = Input.GetAxis ("DragaoHorizontal") * velocidadeRotacao;
-		transform.Translate (translacao, 0, 0);
-		transform.Rotate (0, rotacao, 0);
+		transform.Translate (translacao * Time.deltaTime, 0, 0);
+		transform.Rotate (0, rotacao * Time.deltaTime, 0);
 	}
 
 	IEnumerator AnimacaoMorte(Vector3 anguloGiro, Vector3 tamanhoFinal, float duracao) {
@@ -57,6 +59,8 @@ public class ControleDragao : MonoBehaviour {
 		// calcula o tempo de cada trecho. agora o vetor tempos tem, de fato, os tempos de cada trecho
 		for (int i = 0; i < caminho.Length; i++)
 		tempos[i] = tempos[i] / distanciaTotal;
+		// 
+		alterarCameras();
 		// faz o movimento
 		float velocidade = distanciaTotal / duracaoTotal;
 		float duracaoAtual;
@@ -64,7 +68,6 @@ public class ControleDragao : MonoBehaviour {
 		for (int i = 0; i < caminho.Length; i++) {
 			atual = caminho[i].transform;
 			duracaoAtual = tempos[i] * duracaoTotal;
-			Debug.Log(duracaoAtual);
 			for (float t = 0.0f; t < duracaoAtual; t += Time.deltaTime) {
 				transform.position = Vector3.MoveTowards(transform.position, atual.position, velocidade * Time.deltaTime);
 				yield return null;
@@ -73,5 +76,12 @@ public class ControleDragao : MonoBehaviour {
 		}
 
 		rigidbody.useGravity = true;
+		alterarCameras ();
+	}
+
+	void alterarCameras() {
+		bool jogador = cameraJogador.camera.enabled;
+		cameraJogador.camera.enabled = !jogador;
+		cameraDragao.camera.enabled = jogador;
 	}
 }
