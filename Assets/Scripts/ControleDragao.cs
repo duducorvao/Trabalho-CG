@@ -17,7 +17,7 @@ public class ControleDragao : MonoBehaviour {
 		if (Input.GetButtonUp ("JogarBolaDeFogo")) {
 			GameObject bolaNova = Instantiate(bolaOriginal, transform.position, transform.rotation) as GameObject;
 			Physics.IgnoreCollision(collider, bolaNova.collider);
-			bolaNova.rigidbody.AddForce(-Vector3.right * 1000);
+			bolaNova.rigidbody.AddRelativeForce(Quaternion.Euler(0, -90, 0) * Vector3.forward * 1000);
 		}
 
 		// TODO: colocar no lugar certo
