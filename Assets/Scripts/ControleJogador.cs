@@ -8,11 +8,16 @@ public class ControleJogador : MonoBehaviour {
 	public GameObject powerCollider;
 	public ParticleSystem efeito;
 	public Light pointLight;
+	public ControleDragao dragao;
+	public bool atingiu;
+	private bool dragaoMorrendo;
 	private bool walk;
 	private bool attack;
 	private bool defend;
 
 	void Start() {
+		atingiu = false;
+		dragaoMorrendo = false;
 		AlterarEstados(0.0f, 0.0f);
 	}
 
@@ -30,7 +35,7 @@ public class ControleJogador : MonoBehaviour {
 		animator.SetBool ("Attack", attack);
 		animator.SetBool ("Defend", defend);
 
-		LancarPoder ();
+		TratarPoder ();
 		
 		transform.Translate(0, 0, -translacao * Time.deltaTime);
 		transform.Rotate(0, rotacao * Time.deltaTime, 0);
@@ -56,18 +61,19 @@ public class ControleJogador : MonoBehaviour {
 		}
 	}
 
-	void LancarPoder() {
-		if (defend) {
+	void TratarPoder() {
+		if (!atingiu && defend) {
 			efeito.Play ();
-		} else {
-			efeito.Stop();
-		}
-		if (efeito.isPlaying) {
 			pointLight.gameObject.SetActive(true);
 			powerCollider.gameObject.SetActive(true);
-		} else{
+		} else {
+			efeito.Stop();
 			pointLight.gameObject.SetActive(false);
 			powerCollider.gameObject.SetActive(false);
+			if (atingiu && !dragaoMorrendo) {
+				StartCoroutine(dragao.AnimacaoMorte(Vector3.up * 720.0f, Vector3.one * 0.1f, 4.0f));
+				dragaoMorrendo = true;
+			}
 		}
 	}
 }

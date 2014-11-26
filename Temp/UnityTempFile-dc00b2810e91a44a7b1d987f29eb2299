@@ -39,12 +39,12 @@
 -define:UNITY_EDITOR
 -define:UNITY_EDITOR_OSX
 'Assets/Scripts/ChestAnimation.cs'
+'Assets/Scripts/ColisaoPoder.cs'
 'Assets/Scripts/ControleCamera.cs'
 'Assets/Scripts/ControleDragao.cs'
 'Assets/Scripts/ControleIluminacao.cs'
 'Assets/Scripts/ControleJogador.cs'
 'Assets/Scripts/DetectorIluminacao.cs'
 'Assets/Scripts/DetectorPortao.cs'
-'Assets/Scripts/PowerScript.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'

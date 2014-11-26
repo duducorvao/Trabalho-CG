@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ChestAnimation.cs" />
+     <Compile Include="Assets\Scripts\ColisaoPoder.cs" />
      <Compile Include="Assets\Scripts\ControleCamera.cs" />
      <Compile Include="Assets\Scripts\ControleDragao.cs" />
      <Compile Include="Assets\Scripts\ControleIluminacao.cs" />

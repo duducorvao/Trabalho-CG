@@ -19,11 +19,8 @@ public class ControleDragao : MonoBehaviour {
 			Physics.IgnoreCollision(collider, bolaNova.collider);
 			bolaNova.rigidbody.AddRelativeForce(Quaternion.Euler(0, -90, 0) * Vector3.forward * 1000);
 		}
-
-		// TODO: colocar no lugar certo
-		if (Input.GetKeyUp(KeyCode.M)) {
-			StartCoroutine(AnimacaoMorte(Vector3.up * 720.0f, Vector3.one * 0.1f, 3.0f));
-		}
+		if (Input.GetButtonUp("BotaoRabada"))
+			StartCoroutine(Rabada(Vector3.up * -45.0f, 0.25f, Vector3.up * (360.0f + 45.0f), 1.0f));
 	}
 
 	void FixedUpdate () {
@@ -33,7 +30,19 @@ public class ControleDragao : MonoBehaviour {
 		transform.Rotate (0, rotacao * Time.deltaTime, 0);
 	}
 
-	IEnumerator AnimacaoMorte(Vector3 anguloGiro, Vector3 tamanhoFinal, float duracao) {
+	IEnumerator Rabada(Vector3 anguloGiro1, float duracao1, Vector3 anguloGiro2, float duracao2) {
+		Vector3 grausPorSegundo1 = anguloGiro1 / duracao1;
+		for(float t = 0f ; t < duracao1; t += Time.deltaTime) {
+			transform.Rotate(grausPorSegundo1 * Time.deltaTime);
+			yield return null;
+		}
+		Vector3 grausPorSegundo2 = anguloGiro2 / duracao2;
+		for(float t = 0f ; t < duracao2; t += Time.deltaTime) {
+			transform.Rotate(grausPorSegundo2 * Time.deltaTime);
+			yield return null;
+		}
+	}
+	public IEnumerator AnimacaoMorte(Vector3 anguloGiro, Vector3 tamanhoFinal, float duracao) {
 		Vector3 grausPorSegundo = anguloGiro / duracao;
 		Vector3 scalePorSegundo = (tamanhoFinal - transform.localScale) / duracao;
 		for(float t = 0f ; t < duracao; t += Time.deltaTime) {
