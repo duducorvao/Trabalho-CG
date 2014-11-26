@@ -39,7 +39,7 @@ public class ControleDragao2 : MonoBehaviour {
 			fogo = false;
 		}
 
-		if(Input.GetKey(KeyCode.End)){
+		if(Input.GetKey(KeyCode.U)){
 			voar = true;
 		}else{
 			voar = false;
