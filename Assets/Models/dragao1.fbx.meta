@@ -1,0 +1,742 @@
+fileFormatVersion: 2
+guid: c21477bbdc2224847b95ff6eb5831cd5
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Asa_Base_D
+    100002: Asa_Base_E
+    100004: Asa_Meio_D
+    100006: Asa_Meio_E
+    100008: Asa_Ponta_D
+    100010: Asa_Ponta_E
+    100012: Boca_Inf
+    100014: Boca_Sup
+    100016: Cauda_1
+    100018: Cauda_2
+    100020: Cauda_3
+    100022: Cauda_4
+    100024: Cauda_5
+    100026: Cauda_6
+    100028: Costas_1
+    100030: Costas_2
+    100032: Costas_3
+    100034: //RootNode
+    100036: Esqueleto
+    100038: Perna_Base1_D
+    100040: Perna_Base1_E
+    100042: Perna_Base2_D
+    100044: Perna_Base2_E
+    100046: Perna_Meio1_D
+    100048: Perna_Meio1_E
+    100050: Perna_Meio2_1_D
+    100052: Perna_Meio2_1_E
+    100054: Perna_Meio2_2_D
+    100056: Perna_Meio2_2_E
+    100058: Perna_Sup1_D
+    100060: Perna_Sup1_E
+    100062: Perna_Sup2_D
+    100064: Perna_Sup2_E
+    100066: Pescoco_1
+    100068: Pescoco_2
+    100070: Pescoco_3
+    100072: Pescoco_4
+    400000: Asa_Base_D
+    400002: Asa_Base_E
+    400004: Asa_Meio_D
+    400006: Asa_Meio_E
+    400008: Asa_Ponta_D
+    400010: Asa_Ponta_E
+    400012: Boca_Inf
+    400014: Boca_Sup
+    400016: Cauda_1
+    400018: Cauda_2
+    400020: Cauda_3
+    400022: Cauda_4
+    400024: Cauda_5
+    400026: Cauda_6
+    400028: Costas_1
+    400030: Costas_2
+    400032: Costas_3
+    400034: //RootNode
+    400036: Esqueleto
+    400038: Perna_Base1_D
+    400040: Perna_Base1_E
+    400042: Perna_Base2_D
+    400044: Perna_Base2_E
+    400046: Perna_Meio1_D
+    400048: Perna_Meio1_E
+    400050: Perna_Meio2_1_D
+    400052: Perna_Meio2_1_E
+    400054: Perna_Meio2_2_D
+    400056: Perna_Meio2_2_E
+    400058: Perna_Sup1_D
+    400060: Perna_Sup1_E
+    400062: Perna_Sup2_D
+    400064: Perna_Sup2_E
+    400066: Pescoco_1
+    400068: Pescoco_2
+    400070: Pescoco_3
+    400072: Pescoco_4
+    4300000: DragaoModel
+    7400000: Default Take
+    7400002: Andar
+    7400004: AtaqueCauda
+    7400006: BolaDeFogo
+    7400008: Morte
+    7400010: Voo
+    9500000: //RootNode
+    13700000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: .100000009
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Esqueleto
+        weight: 1
+      - path: Esqueleto/Cauda_1
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4/Cauda_5
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4/Cauda_5/Cauda_6
+        weight: 1
+      - path: Esqueleto/Costas_3
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D/Asa_Meio_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D/Asa_Meio_D/Asa_Ponta_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E/Asa_Meio_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E/Asa_Meio_E/Asa_Ponta_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1/Boca_Inf
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1/Boca_Sup
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D/Perna_Meio1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D/Perna_Meio1_D/Perna_Base1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E/Perna_Meio1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E/Perna_Meio1_E/Perna_Base1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D/Perna_Meio2_2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D/Perna_Meio2_2_D/Perna_Base2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E/Perna_Meio2_2_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E/Perna_Meio2_2_E/Perna_Base2_E
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Andar
+      takeName: Andar
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Esqueleto
+        weight: 1
+      - path: Esqueleto/Cauda_1
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4/Cauda_5
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4/Cauda_5/Cauda_6
+        weight: 1
+      - path: Esqueleto/Costas_3
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D/Asa_Meio_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D/Asa_Meio_D/Asa_Ponta_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E/Asa_Meio_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E/Asa_Meio_E/Asa_Ponta_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1/Boca_Inf
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1/Boca_Sup
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D/Perna_Meio1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D/Perna_Meio1_D/Perna_Base1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E/Perna_Meio1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E/Perna_Meio1_E/Perna_Base1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D/Perna_Meio2_2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D/Perna_Meio2_2_D/Perna_Base2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E/Perna_Meio2_2_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E/Perna_Meio2_2_E/Perna_Base2_E
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: AtaqueCauda
+      takeName: AtaqueCauda
+      firstFrame: -1
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Esqueleto
+        weight: 1
+      - path: Esqueleto/Cauda_1
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4/Cauda_5
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4/Cauda_5/Cauda_6
+        weight: 1
+      - path: Esqueleto/Costas_3
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D/Asa_Meio_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D/Asa_Meio_D/Asa_Ponta_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E/Asa_Meio_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E/Asa_Meio_E/Asa_Ponta_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1/Boca_Inf
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1/Boca_Sup
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D/Perna_Meio1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D/Perna_Meio1_D/Perna_Base1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E/Perna_Meio1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E/Perna_Meio1_E/Perna_Base1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D/Perna_Meio2_2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D/Perna_Meio2_2_D/Perna_Base2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E/Perna_Meio2_2_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E/Perna_Meio2_2_E/Perna_Base2_E
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: BolaDeFogo
+      takeName: BolaDeFogo
+      firstFrame: -1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Esqueleto
+        weight: 1
+      - path: Esqueleto/Cauda_1
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4/Cauda_5
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4/Cauda_5/Cauda_6
+        weight: 1
+      - path: Esqueleto/Costas_3
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D/Asa_Meio_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D/Asa_Meio_D/Asa_Ponta_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E/Asa_Meio_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E/Asa_Meio_E/Asa_Ponta_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1/Boca_Inf
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1/Boca_Sup
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D/Perna_Meio1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D/Perna_Meio1_D/Perna_Base1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E/Perna_Meio1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E/Perna_Meio1_E/Perna_Base1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D/Perna_Meio2_2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D/Perna_Meio2_2_D/Perna_Base2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E/Perna_Meio2_2_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E/Perna_Meio2_2_E/Perna_Base2_E
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Morte
+      takeName: Morte
+      firstFrame: 0
+      lastFrame: 89
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Esqueleto
+        weight: 1
+      - path: Esqueleto/Cauda_1
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4/Cauda_5
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4/Cauda_5/Cauda_6
+        weight: 1
+      - path: Esqueleto/Costas_3
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D/Asa_Meio_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D/Asa_Meio_D/Asa_Ponta_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E/Asa_Meio_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E/Asa_Meio_E/Asa_Ponta_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1/Boca_Inf
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1/Boca_Sup
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D/Perna_Meio1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D/Perna_Meio1_D/Perna_Base1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E/Perna_Meio1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E/Perna_Meio1_E/Perna_Base1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D/Perna_Meio2_2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D/Perna_Meio2_2_D/Perna_Base2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E/Perna_Meio2_2_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E/Perna_Meio2_2_E/Perna_Base2_E
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Voo
+      takeName: Voo
+      firstFrame: 0
+      lastFrame: 129
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Esqueleto
+        weight: 1
+      - path: Esqueleto/Cauda_1
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4/Cauda_5
+        weight: 1
+      - path: Esqueleto/Cauda_1/Cauda_2/Cauda_3/Cauda_4/Cauda_5/Cauda_6
+        weight: 1
+      - path: Esqueleto/Costas_3
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D/Asa_Meio_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_D/Asa_Meio_D/Asa_Ponta_D
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E/Asa_Meio_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Asa_Base_E/Asa_Meio_E/Asa_Ponta_E
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1/Boca_Inf
+        weight: 1
+      - path: Esqueleto/Costas_3/Costas_2/Costas_1/Pescoco_4/Pescoco_3/Pescoco_2/Pescoco_1/Boca_Sup
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D/Perna_Meio1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_D/Perna_Meio1_D/Perna_Base1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E/Perna_Meio1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup1_E/Perna_Meio1_E/Perna_Base1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D/Perna_Meio2_2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_D/Perna_Meio2_1_D/Perna_Meio2_2_D/Perna_Base2_D
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E/Perna_Meio2_2_E
+        weight: 1
+      - path: Esqueleto/Perna_Sup2_E/Perna_Meio2_1_E/Perna_Meio2_2_E/Perna_Base2_E
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .75
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

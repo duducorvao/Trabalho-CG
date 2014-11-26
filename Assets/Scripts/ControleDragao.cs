@@ -15,13 +15,20 @@ public class ControleDragao : MonoBehaviour {
 	public float velocidadeRotacao;
 	public AudioClip somMorte;
 
+	//Animaço
+	public Animator animator;
+	private bool andar, cauda, fogo, morte;
+
+
 	void Update () {
 		if (Input.GetButtonUp ("JogarBolaDeFogo")) {
+
 			GameObject bolaNova = Instantiate(bolaOriginal, transform.position, transform.rotation) as GameObject;
 			Physics.IgnoreCollision(collider, bolaNova.collider);
 			bolaNova.rigidbody.AddRelativeForce(Quaternion.Euler(0, -90, 0) * Vector3.forward * 1000);
 		}
 		if (Input.GetButtonUp("BotaoRabada"))
+
 			StartCoroutine(Rabada(Vector3.up * -45.0f, 0.25f, Vector3.up * (360.0f + 45.0f), 1.0f));
 	}
 
