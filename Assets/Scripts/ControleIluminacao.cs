@@ -13,6 +13,8 @@ public class ControleIluminacao : MonoBehaviour {
 	}
 
 	public IEnumerator Fade(bool fadeIn, float duracao) {
+		ControleSom.parar ();
+
 		float intensidadePorSegundoDirectional = intensidadeDirectional / duracao;
 		float intensidadePorSegundoFill = intensidadeFill / duracao;
 		if (!fadeIn) {

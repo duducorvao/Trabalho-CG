@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public class ControleDragao : MonoBehaviour {
 	public GameObject jogador;
 	public GameObject bolaOriginal;
@@ -12,6 +13,7 @@ public class ControleDragao : MonoBehaviour {
 	public ControleIluminacao iluminacao;
 	public float velocidadeTranslacao;
 	public float velocidadeRotacao;
+	public AudioClip somMorte;
 
 	void Update () {
 		if (Input.GetButtonUp ("JogarBolaDeFogo")) {
@@ -43,6 +45,7 @@ public class ControleDragao : MonoBehaviour {
 		}
 	}
 	public IEnumerator AnimacaoMorte(Vector3 anguloGiro, Vector3 tamanhoFinal, float duracao) {
+		ControleSom.tocarDragaoMorrendo ();
 		Vector3 grausPorSegundo = anguloGiro / duracao;
 		Vector3 scalePorSegundo = (tamanhoFinal - transform.localScale) / duracao;
 		for(float t = 0f ; t < duracao; t += Time.deltaTime) {
@@ -54,7 +57,9 @@ public class ControleDragao : MonoBehaviour {
 		fumaca.transform.position = transform.position;
 		fumaca.SetActive (true);
 
+		ControleSom.tocarDragaoEstrondo ();
 		yield return new WaitForSeconds(5.0f);
+
 
 		StartCoroutine (iluminacao.Fade (false, 3.0f));
 
@@ -62,6 +67,8 @@ public class ControleDragao : MonoBehaviour {
 	}
 
 	public IEnumerator IrParaArena(float duracaoTotal) {
+		ControleSom.tocarDragaoVoando ();
+
 		float distanciaTotal = 0.0f;
 		Transform ultimo;
 		Transform atual;
@@ -92,6 +99,8 @@ public class ControleDragao : MonoBehaviour {
 			}
 			ultimo = atual;
 		}
+
+		ControleSom.parar ();
 
 		rigidbody.useGravity = true;
 		alterarCamerasJogadorDragao ();

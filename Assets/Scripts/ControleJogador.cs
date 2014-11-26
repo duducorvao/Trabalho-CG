@@ -71,7 +71,7 @@ public class ControleJogador : MonoBehaviour {
 			pointLight.gameObject.SetActive(false);
 			powerCollider.gameObject.SetActive(false);
 			if (atingiu && !dragaoMorrendo) {
-				StartCoroutine(dragao.AnimacaoMorte(Vector3.up * 720.0f, Vector3.one * 0.1f, 4.0f));
+				StartCoroutine(dragao.AnimacaoMorte(Vector3.up * 720.0f, Vector3.one * 0.1f, 6.0f));
 				dragaoMorrendo = true;
 			}
 		}
