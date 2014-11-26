@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(AudioSource))]
 public class ControleDragao : MonoBehaviour {
 	public GameObject jogador;
 	public GameObject bolaOriginal;
@@ -13,7 +12,6 @@ public class ControleDragao : MonoBehaviour {
 	public ControleIluminacao iluminacao;
 	public float velocidadeTranslacao;
 	public float velocidadeRotacao;
-	public AudioClip somMorte;
 
 	//Animaço
 	public Animator animator;
