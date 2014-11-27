@@ -90,6 +90,7 @@ public class ControleDragao : MonoBehaviour {
 		Vector3 incremento = new Vector3 (-3.2f, 1.2f, 1.5f);
 
 		GameObject bolaNova = Instantiate(bolaOriginal, transform.position + incremento, transform.localRotation) as GameObject;
+		bolaNova.gameObject.SetActive (true);
 
 		Physics.IgnoreCollision(collider, bolaNova.collider);
 		bolaNova.rigidbody.AddRelativeForce(Quaternion.Euler(0, -90, 0) * Vector3.forward * 1000);
