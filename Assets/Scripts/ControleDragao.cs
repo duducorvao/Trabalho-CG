@@ -86,13 +86,14 @@ public class ControleDragao : MonoBehaviour {
 	IEnumerator jogarBolaAnimacao() {
 		AlterarAnimacao (DragaoFazendo.Cuspindo);
 		yield return new WaitForSeconds(1.5f);
-		GameObject bolaNova = Instantiate(bolaOriginal, transform.position, transform.rotation) as GameObject;
+		Vector3 incremento = new Vector3 (1.0f, 1.0f, 0.0f);
+		GameObject bolaNova = Instantiate(bolaOriginal, transform.position + incremento, transform.rotation) as GameObject;
 		Physics.IgnoreCollision(collider, bolaNova.collider);
 		bolaNova.rigidbody.AddRelativeForce(Quaternion.Euler(0, -90, 0) * Vector3.forward * 1000);
 		AlterarAnimacao (DragaoFazendo.Nada);
 	}
 	void darRabada() {
-		StartCoroutine(darRabadaAnimacao(Vector3.up * -45.0f, 0.25f, Vector3.up * (360.0f + 45.0f), 1.0f));
+		StartCoroutine(darRabadaAnimacao(Vector3.forward * -45.0f, 0.25f, Vector3.forward * (360.0f + 45.0f), 1.0f));
 	}
 	IEnumerator darRabadaAnimacao(Vector3 anguloGiro1, float duracao1, Vector3 anguloGiro2, float duracao2) {
 		Vector3 grausPorSegundo1 = anguloGiro1 / duracao1;
@@ -105,6 +106,9 @@ public class ControleDragao : MonoBehaviour {
 			transform.Rotate(grausPorSegundo2 * Time.deltaTime);
 			yield return null;
 		}
+	}
+	public void morrer() {
+		StartCoroutine(AnimacaoMorte(Vector3.forward * 720.0f, Vector3.one * 0.01f, 3.0f));
 	}
 	public IEnumerator AnimacaoMorte(Vector3 anguloGiro, Vector3 tamanhoFinal, float duracao) {
 		ControleSom.tocarDragaoMorrendo ();
