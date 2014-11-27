@@ -24,14 +24,12 @@ public class ControleDragao : MonoBehaviour {
 	private DragaoFazendo fazendo;
 
 	void Start() {
-		AlterarAnimacao (DragaoFazendo.Nada);
+// sabe-se deus por quê!
+//		AlterarAnimacao (DragaoFazendo.Nada);
 	}
 	
 	void Update () {
 		if (Input.GetButtonUp ("JogarBolaDeFogo")) {
-			GameObject bolaNova = Instantiate(bolaOriginal, transform.position, transform.rotation) as GameObject;
-			Physics.IgnoreCollision(collider, bolaNova.collider);
-			bolaNova.rigidbody.AddRelativeForce(Quaternion.Euler(0, -90, 0) * Vector3.forward * 1000);
 		}
 		if (Input.GetButtonUp("BotaoRabada"))
 			StartCoroutine(Rabada(Vector3.up * -45.0f, 0.25f, Vector3.up * (360.0f + 45.0f), 1.0f));
@@ -44,7 +42,7 @@ public class ControleDragao : MonoBehaviour {
 		AlterarEstados (translacao, rotacao);
 		
 		transform.Translate (0, 0, translacao * Time.deltaTime);
-		transform.Rotate (0, rotacao * Time.deltaTime, 0);
+		transform.Rotate (0, rotacao * Time.deltaTime, 0, Space.World);
 	}
 	void AlterarAnimacao(DragaoFazendo oQue) {
 		fazendo = oQue;
@@ -71,6 +69,7 @@ public class ControleDragao : MonoBehaviour {
 			}
 		} else {
 			andar = translacao > 0.0f;
+
 		}
 
 		animator.SetBool ("Andar", andar);
@@ -78,6 +77,17 @@ public class ControleDragao : MonoBehaviour {
 		animator.SetBool ("Fogo", fogo);
 		animator.SetBool ("Voar", voar);
 		animator.SetBool ("Morte", morte);
+	}
+	void jogarBola() {
+		StartCoroutine (jogarBolaAnimacao());
+	}
+	IEnumerator jogarBolaAnimacao() {
+		AlterarAnimacao (DragaoFazendo.Cuspindo);
+		yield return new WaitForSeconds(2.0f);
+		GameObject bolaNova = Instantiate(bolaOriginal, transform.position, transform.rotation) as GameObject;
+		Physics.IgnoreCollision(collider, bolaNova.collider);
+		bolaNova.rigidbody.AddRelativeForce(Quaternion.Euler(0, -90, 0) * Vector3.forward * 1000);
+		AlterarAnimacao (DragaoFazendo.Nada);
 	}
 
 	IEnumerator Rabada(Vector3 anguloGiro1, float duracao1, Vector3 anguloGiro2, float duracao2) {

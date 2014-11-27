@@ -3,6 +3,7 @@
 -nowarn:0169
 -out:'Temp/Assembly-CSharp.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll'
+-r:'Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
 -define:UNITY_4_5_5
 -define:UNITY_4_5
@@ -48,5 +49,6 @@
 'Assets/Scripts/ControleSom.cs'
 'Assets/Scripts/DetectorIluminacao.cs'
 'Assets/Scripts/DetectorPortao.cs'
+'Assets/Scripts/triforceScript.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'
