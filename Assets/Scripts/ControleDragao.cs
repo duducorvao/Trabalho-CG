@@ -69,8 +69,7 @@ public class ControleDragao : MonoBehaviour {
 					morte = true;
 					break;
 			}
-		}
-		else {
+		} else {
 			andar = translacao > 0.0f;
 		}
 
