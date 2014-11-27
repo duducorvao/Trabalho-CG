@@ -11,6 +11,8 @@ public class ControleSom : MonoBehaviour {
 	public AudioClip dragaoEstrondo;
 	public AudioClip aparecimentoDragao;
 	public AudioClip dragaoVoando;
+	public AudioClip musicaEntrada;
+	public AudioClip musicaBatalha;
 
 	void Start () {
 		instance = this;
@@ -39,6 +41,12 @@ public class ControleSom : MonoBehaviour {
 	}
 	public static void tocarDragaoVoando() {
 		instance.tocar(instance.dragaoVoando, true);
+	}
+	public static void tocarMusicaEntrada() {
+		instance.tocar(instance.musicaEntrada);
+	}
+	public static void tocarMusicaBatalha() {
+		instance.tocar(instance.musicaBatalha);
 	}
 	public static void parar (){
 		instance.audio.Stop ();

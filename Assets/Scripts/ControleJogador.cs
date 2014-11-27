@@ -19,6 +19,7 @@ public class ControleJogador : MonoBehaviour {
 		atingiu = false;
 		dragaoMorrendo = false;
 		AlterarEstados(0.0f, 0.0f);
+		ControleSom.tocarMusicaEntrada ();
 	}
 
 	void FixedUpdate(){
@@ -29,11 +30,6 @@ public class ControleJogador : MonoBehaviour {
 		AlterarEstados (translacao, rotacao);
 		if (walk)
 			translacao /= 3.0f;
-
-		animator.SetFloat ("Sprint", translacao);
-		animator.SetBool ("Walk", walk);
-		animator.SetBool ("Attack", attack);
-		animator.SetBool ("Defend", defend);
 
 		TratarPoder ();
 		
@@ -59,6 +55,11 @@ public class ControleJogador : MonoBehaviour {
 			else if (Input.GetButton("BotaoDefender"))
 				defend = true;
 		}
+
+		animator.SetFloat ("Sprint", translacao);
+		animator.SetBool ("Walk", walk);
+		animator.SetBool ("Attack", attack);
+		animator.SetBool ("Defend", defend);
 	}
 
 	void TratarPoder() {

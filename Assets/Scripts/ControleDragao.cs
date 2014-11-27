@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+enum DragaoFazendo {
+	Nada,
+	Voando,
+	Cuspindo,
+	Morrendo
+}
+
 public class ControleDragao : MonoBehaviour {
 	public GameObject jogador;
 	public GameObject bolaOriginal;
@@ -13,28 +20,65 @@ public class ControleDragao : MonoBehaviour {
 	public float velocidadeTranslacao;
 	public float velocidadeRotacao;
 
-	//Animaço
 	public Animator animator;
-	private bool andar, cauda, fogo, morte;
+	private DragaoFazendo fazendo;
 
-
+	void Start() {
+		AlterarAnimacao (DragaoFazendo.Nada);
+	}
+	
 	void Update () {
 		if (Input.GetButtonUp ("JogarBolaDeFogo")) {
-
 			GameObject bolaNova = Instantiate(bolaOriginal, transform.position, transform.rotation) as GameObject;
 			Physics.IgnoreCollision(collider, bolaNova.collider);
 			bolaNova.rigidbody.AddRelativeForce(Quaternion.Euler(0, -90, 0) * Vector3.forward * 1000);
 		}
 		if (Input.GetButtonUp("BotaoRabada"))
-
 			StartCoroutine(Rabada(Vector3.up * -45.0f, 0.25f, Vector3.up * (360.0f + 45.0f), 1.0f));
-	}
 
-	void FixedUpdate () {
 		float translacao = Input.GetAxis ("DragaoVertical") * velocidadeTranslacao;
 		float rotacao    = Input.GetAxis ("DragaoHorizontal") * velocidadeRotacao;
-		transform.Translate (translacao * Time.deltaTime, 0, 0);
+		if (translacao < 0.0f)
+			translacao = 0.0f;
+
+		AlterarEstados (translacao, rotacao);
+		
+		transform.Translate (0, 0, translacao * Time.deltaTime);
 		transform.Rotate (0, rotacao * Time.deltaTime, 0);
+	}
+	void AlterarAnimacao(DragaoFazendo oQue) {
+		fazendo = oQue;
+		AlterarEstados (0.0f, 0.0f);
+	}
+	void AlterarEstados(float translacao, float rotate) {
+		bool andar = false;
+		bool cauda = false;
+		bool voar = false;
+		bool fogo = false;
+		bool morte = false;
+
+		if (fazendo != DragaoFazendo.Nada) {
+			switch (fazendo) {
+				case DragaoFazendo.Voando:
+					voar = true;
+					break;
+				case DragaoFazendo.Cuspindo:
+					fogo = true;
+					break;
+				case DragaoFazendo.Morrendo:
+					morte = true;
+					break;
+			}
+		}
+		else {
+			andar = translacao > 0.0f;
+		}
+
+		animator.SetBool ("Andar", andar);
+		animator.SetBool ("Cauda", cauda);
+		animator.SetBool ("Fogo", fogo);
+		animator.SetBool ("Voar", voar);
+		animator.SetBool ("Morte", morte);
 	}
 
 	IEnumerator Rabada(Vector3 anguloGiro1, float duracao1, Vector3 anguloGiro2, float duracao2) {
@@ -72,6 +116,8 @@ public class ControleDragao : MonoBehaviour {
 	}
 
 	public IEnumerator IrParaArena(float duracaoTotal) {
+		AlterarAnimacao (DragaoFazendo.Voando);
+
 		ControleSom.tocarDragaoVoando ();
 
 		float distanciaTotal = 0.0f;
@@ -105,10 +151,12 @@ public class ControleDragao : MonoBehaviour {
 			ultimo = atual;
 		}
 
-		ControleSom.parar ();
-
 		rigidbody.useGravity = true;
 		alterarCamerasJogadorDragao ();
+
+		AlterarAnimacao (DragaoFazendo.Nada);
+
+		ControleSom.tocarMusicaBatalha ();
 	}
 
 	void alterarCamerasJogadorDragao() {
