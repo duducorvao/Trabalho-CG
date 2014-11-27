@@ -45,6 +45,7 @@ public class ControleDragao : MonoBehaviour {
 		AlterarEstados (translacao, rotacao);
 		transform.Translate (-translacao * Time.deltaTime, 0, 0);
 		transform.Rotate (0, rotacao * Time.deltaTime, 0, Space.World);
+
 	}
 	void AlterarAnimacao(DragaoFazendo oQue) {
 		fazendo = oQue;
@@ -85,11 +86,14 @@ public class ControleDragao : MonoBehaviour {
 	}
 	IEnumerator jogarBolaAnimacao() {
 		AlterarAnimacao (DragaoFazendo.Cuspindo);
-		yield return new WaitForSeconds(1.5f);
-		Vector3 incremento = new Vector3 (1.0f, 1.0f, 0.0f);
-		GameObject bolaNova = Instantiate(bolaOriginal, transform.position + incremento, transform.rotation) as GameObject;
+		yield return new WaitForSeconds(1.3f);
+		Vector3 incremento = new Vector3 (-3.2f, 1.2f, 1.5f);
+
+		GameObject bolaNova = Instantiate(bolaOriginal, transform.position + incremento, transform.localRotation) as GameObject;
+
 		Physics.IgnoreCollision(collider, bolaNova.collider);
 		bolaNova.rigidbody.AddRelativeForce(Quaternion.Euler(0, -90, 0) * Vector3.forward * 1000);
+
 		AlterarAnimacao (DragaoFazendo.Nada);
 	}
 	void darRabada() {
@@ -186,4 +190,6 @@ public class ControleDragao : MonoBehaviour {
 		cameraDragao.camera.enabled = false;
 		cameraBau.camera.enabled = true;
 	}
+	
+
 }

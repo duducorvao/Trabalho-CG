@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ControleDragao.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ColisaoBolaDeFogo.cs">
     <Files>
-      <File FileName="Assets/Scripts/ControleDragao.cs" Line="149" Column="23" />
+      <File FileName="Assets\Scripts\ControleDragao.cs" Line="194" Column="1" />
+      <File FileName="Assets\Scripts\ColisaoBolaDeFogo.cs" Line="6" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
