@@ -30,18 +30,20 @@ public class ControleDragao : MonoBehaviour {
 	
 	void Update () {
 		if (Input.GetButtonUp ("JogarBolaDeFogo")) {
+			jogarBola ();
+			return;
 		}
-		if (Input.GetButtonUp("BotaoRabada"))
-			StartCoroutine(Rabada(Vector3.up * -45.0f, 0.25f, Vector3.up * (360.0f + 45.0f), 1.0f));
+		if (Input.GetButtonUp ("BotaoRabada")) {
+			darRabada ();
+			return;
+		}
 
 		float translacao = Input.GetAxis ("DragaoVertical") * velocidadeTranslacao;
 		float rotacao    = Input.GetAxis ("DragaoHorizontal") * velocidadeRotacao;
 		if (translacao < 0.0f)
 			translacao = 0.0f;
-
 		AlterarEstados (translacao, rotacao);
-		
-		transform.Translate (0, 0, translacao * Time.deltaTime);
+		transform.Translate (-translacao * Time.deltaTime, 0, 0);
 		transform.Rotate (0, rotacao * Time.deltaTime, 0, Space.World);
 	}
 	void AlterarAnimacao(DragaoFazendo oQue) {
@@ -83,14 +85,16 @@ public class ControleDragao : MonoBehaviour {
 	}
 	IEnumerator jogarBolaAnimacao() {
 		AlterarAnimacao (DragaoFazendo.Cuspindo);
-		yield return new WaitForSeconds(2.0f);
+		yield return new WaitForSeconds(1.5f);
 		GameObject bolaNova = Instantiate(bolaOriginal, transform.position, transform.rotation) as GameObject;
 		Physics.IgnoreCollision(collider, bolaNova.collider);
 		bolaNova.rigidbody.AddRelativeForce(Quaternion.Euler(0, -90, 0) * Vector3.forward * 1000);
 		AlterarAnimacao (DragaoFazendo.Nada);
 	}
-
-	IEnumerator Rabada(Vector3 anguloGiro1, float duracao1, Vector3 anguloGiro2, float duracao2) {
+	void darRabada() {
+		StartCoroutine(darRabadaAnimacao(Vector3.up * -45.0f, 0.25f, Vector3.up * (360.0f + 45.0f), 1.0f));
+	}
+	IEnumerator darRabadaAnimacao(Vector3 anguloGiro1, float duracao1, Vector3 anguloGiro2, float duracao2) {
 		Vector3 grausPorSegundo1 = anguloGiro1 / duracao1;
 		for(float t = 0f ; t < duracao1; t += Time.deltaTime) {
 			transform.Rotate(grausPorSegundo1 * Time.deltaTime);
