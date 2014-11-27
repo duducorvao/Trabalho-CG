@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class ColisaoBolaDeFogo : MonoBehaviour {
-	void onTriggerEnter(Collider other) {
-		Destroy (gameObject);
+
+	void OnTriggerEnter(Collider other) {
+		//if (other.tag != "Cortina")
+		Destroy (gameObject, 0.5f);
 	}
 }

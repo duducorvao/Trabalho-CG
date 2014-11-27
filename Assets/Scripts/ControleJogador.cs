@@ -77,4 +77,5 @@ public class ControleJogador : MonoBehaviour {
 			}
 		}
 	}
+	
 }
