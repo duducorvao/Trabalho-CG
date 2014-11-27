@@ -58,6 +58,11 @@
      <Compile Include="Assets\Scripts\DetectorIluminacao.cs" />
      <Compile Include="Assets\Scripts\DetectorPortao.cs" />
      <Compile Include="Assets\Scripts\triforceScript.cs" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{648706BF-57CB-C222-8024-FBE5B132AA0A}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
